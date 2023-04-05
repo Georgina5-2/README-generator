@@ -1,5 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+global.gblob = {};
+
 function renderLicenseBadge(license) 
 {
     if(!license)
@@ -8,13 +10,14 @@ function renderLicenseBadge(license)
     }
     var licenseBadge=![License_badge](licenseImageLink);
 }
-s
+
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) 
 {
     if(!license)
     {
+        
         return "No license found";
     }
     var licenseImageLink=`https://img.shields.io/badge/dynamic/json?url=https://img.shields.io/packagist/l/Georgina5-2/README-generator?style=flat-square&label=LICENSE&query=${license}`
@@ -76,5 +79,4 @@ const generateMarkdown = (answers) =>
 //   return `# ${data.title}`;
 // }
 
-module.exports = generateMarkdown;
-s
+module.exports = GenerateMarkdown;

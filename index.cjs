@@ -1,63 +1,11 @@
 
 // TODO: Include packages needed for this application
-const inquirer = require('inquirer');
+
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown');
-
-// const generateReadMe = (answers) =>
-//   {
-
-//     const {title, desc, install, usage, guide, tests, license, username, email} = answers;
-
-//     return `# Project Title 
-//     ${title}
-//     # Project Description
-//     ${desc}
-    
-//     # Table Of Contents:
-//        [Installation instructions](#Installation instructions)
-//        [Usage instructions](#Usage instructions)
-//        [Contribution Guidelines](#Contribution Guidelines)
-//        [Tests](#Tests)
-//        [License](#License)
-
-//        [Questions](#Questions)
+const GenerateMarkdown = require('utils');
+const inquirer = require('inquirer');
 
 
-//        ## Installation instructions
-//         ${install}
-//         ## Usage instructions
-//         ${usage}
-//         ## Contribution Guidelines  
-//         ${guide}
-//         ## Tests
-//         ${tests}
-//         ## License
-//         ${license}
-//         ## Questions
-//         ${username}
-//         ${email}  
-//     `
-
-//   };
-// TODO: Create an array of questions for user input
-const questions = [];
-
-
-  
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) 
-{
-    fs.writeFile('README.md', readMePageContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created index.html!'));
-    
-}
-
-// TODO: Create a function to initialize app
-function init()
-{
-    
 inquirer
   .prompt([
     {
@@ -115,6 +63,62 @@ inquirer
      console.log('readMePageContent: ', readMePageContent);
      writeToFile('README.md',readMePageContent);
   });
+
+// const generateReadMe = (answers) =>
+//   {
+
+//     const {title, desc, install, usage, guide, tests, license, username, email} = answers;
+
+//     return `# Project Title 
+//     ${title}
+//     # Project Description
+//     ${desc}
+    
+//     # Table Of Contents:
+//        [Installation instructions](#Installation instructions)
+//        [Usage instructions](#Usage instructions)
+//        [Contribution Guidelines](#Contribution Guidelines)
+//        [Tests](#Tests)
+//        [License](#License)
+
+//        [Questions](#Questions)
+
+
+//        ## Installation instructions
+//         ${install}
+//         ## Usage instructions
+//         ${usage}
+//         ## Contribution Guidelines  
+//         ${guide}
+//         ## Tests
+//         ${tests}
+//         ## License
+//         ${license}
+//         ## Questions
+//         ${username}
+//         ${email}  
+//     `
+
+//   };
+// TODO: Create an array of questions for user input
+const questions = [];
+
+
+  
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) 
+{
+    fs.writeFile('README.md', readMePageContent, (err) =>
+      err ? console.log(err) : console.log('Successfully created index.html!'));
+    
+}
+
+// TODO: Create a function to initialize app
+function init()
+{
+    
+
 
     renderLicenseLink(license);
     renderLicenseBadge(license);

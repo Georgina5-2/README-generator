@@ -8,8 +8,9 @@ function renderLicenseBadge(license)
     {
         return "No license found";
     }
-    var licenseBadge=![License_badge](licenseImageLink);
+    return '[![GitHub](`https://img.shields.io/github/license/Georgina5-2/README-Generator`)](`https://github.com/Georgina5-2/README-generator`)';
 }
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -20,11 +21,14 @@ function renderLicenseLink(license)
         
         return "No license found";
     }
-    var licenseImageLink=`https://img.shields.io/badge/dynamic/json?url=https://img.shields.io/packagist/l/Georgina5-2/README-generator?style=flat-square&label=LICENSE&query=${license}`
+    var licenseImageLink=`https://img.shields.io/github/license/Georgina5-2/README-Generator`
+    return licenseImageLink;
 }
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 // function renderLicenseSection(license) 
+//https://img.shields.io/badge/dynamic/json?url=<URL>&label=<LABEL>&query=<$.DATA.SUBDATA>
+//https://shields.io/category/license
 // {
 
 // }
@@ -39,16 +43,8 @@ const generateMarkdown = (answers) =>
     ${title}
     # Project Description
     ${desc}
-    
-
-
-
-
-
-
 
         # Table Of Contents:
-
 
         
        [Installation instructions](#Installation instructions)
@@ -69,14 +65,11 @@ const generateMarkdown = (answers) =>
         ## Tests
         ${tests}
         ## License
-        ${license}
+        ${renderLicenseBadge(license)}
         ## Questions
-        <a href=https://github.com/Georgina5-2>${username}</a>
-        You can reach out to me with additional questions to this email:<a>${email}</a>`
+        [${username}](https://github.com/Georgina5-2)
+        You can reach out to me with additional questions to this email:[${email}](mailto:${email})`
 
   };
-// function generateMarkdown(data) {
-//   return `# ${data.title}`;
-// }
 
-module.exports = GenerateMarkdown;
+export default generateMarkdown;

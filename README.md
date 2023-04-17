@@ -1,7 +1,7 @@
 
   ![GitHub](https://img.shields.io/github/license/Georgina5-2/README-Generator)
   # Project Title 
-  README generator
+  README-generator
   # Project Description
   It generates a README.md file for my project
 

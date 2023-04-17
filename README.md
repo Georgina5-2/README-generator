@@ -29,3 +29,7 @@
   You can reach out to me with additional questions to this email:
   [georgina.joeanand@gmail.com](mailto:georgina.joeanand@gmail.com)<br/>
   Github: [Georgina5-2](https://github.com/Georgina5-2)
+  
+  ## Video link for project presentation:
+  
+  [Video submission for README-generator.webm](https://user-images.githubusercontent.com/122113060/232557134-cd0c81ed-a3d5-44f3-9dcc-8f7fbdb919da.webm)
